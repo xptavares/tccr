@@ -6,7 +6,7 @@ class Addpontos < ActiveRecord::Migration
       Ponto.create nome: 'vacaria, rs'
       Ponto.create nome: 'criciuma, QBC'
       Ponto.create nome: 'lages, ONT'
-      Ponto.create nome: 'porto alegre'
+      Ponto.create nome: 'porto alegre, rs'
       Ponto.create nome: 'torres'
       Ponto.create nome: 'urubici'
       Ponto.create nome: 'Calgary'

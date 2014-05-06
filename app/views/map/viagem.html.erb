@@ -2,8 +2,13 @@
 <div id="control_panel" style="float:right;width:30%;text-align:left;padding-top:20px">
 
  <div class="field">
-   <%= label_tag :rot %><br>
-   <%= collection_select :rot, :rot_id, Rot.all, :id, :nome %>
+   <%= label_tag :veiculo %><br>
+   <%= collection_select :veiculo, :veiculo_id, Veiculo.all, :id, :marca %>
+ </div>
+  <div class="field">
+   <%= label_tag :viagem %><br>
+   <select id="viagem">
+   </select>
  </div>
 
 </div>

@@ -1,6 +1,13 @@
 class VeiculosController < ApplicationController
   before_action :set_veiculo, only: [:show, :edit, :update, :destroy]
 
+  # GET /veiculos/1/viagens
+  # GET /veiculos/1/viagens.json
+  def viagens
+    @viagem = Veiculo.find(params[:id]).viagems
+    render json: @viagem
+  end
+
   # GET /veiculos
   # GET /veiculos.json
   def index

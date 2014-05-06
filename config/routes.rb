@@ -1,7 +1,10 @@
 Tccr::Application.routes.draw do
   get "map/index"
-  get "map/new"
-  get "map/create"
+  get "map/viagem", to: 'map#viagem'
+  get "veiculos/:id/viagens.json", to: 'veiculos#viagens'
+
+  
+
   resources :rots
 
   resources :pontos
