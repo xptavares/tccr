@@ -1,4 +1,7 @@
 Tccr::Application.routes.draw do
+  get "map/index"
+  get "map/new"
+  get "map/create"
   resources :rots
 
   resources :pontos
