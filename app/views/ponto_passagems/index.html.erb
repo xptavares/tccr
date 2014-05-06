@@ -1,0 +1,29 @@
+<h1>Listing ponto_passagems</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rota</th>
+      <th>Ponto</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ponto_passagems.each do |ponto_passagem| %>
+      <tr>
+        <td><%= ponto_passagem.rot.nome %></td>
+        <td><%= ponto_passagem.ponto.nome %></td>
+        <td><%= link_to 'Show', ponto_passagem %></td>
+        <td><%= link_to 'Edit', edit_ponto_passagem_path(ponto_passagem) %></td>
+        <td><%= link_to 'Destroy', ponto_passagem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ponto passagem', new_ponto_passagem_path %>

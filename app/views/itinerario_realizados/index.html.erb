@@ -1,0 +1,31 @@
+<h1>Listing itinerario_realizados</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Latitudo</th>
+      <th>Longitude</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @itinerario_realizados.each do |itinerario_realizado| %>
+      <tr>
+        <td><%= itinerario_realizado.latitudo %></td>
+        <td><%= itinerario_realizado.longitude %></td>
+        <td><%= itinerario_realizado.date %></td>
+        <td><%= link_to 'Show', itinerario_realizado %></td>
+        <td><%= link_to 'Edit', edit_itinerario_realizado_path(itinerario_realizado) %></td>
+        <td><%= link_to 'Destroy', itinerario_realizado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Itinerario realizado', new_itinerario_realizado_path %>

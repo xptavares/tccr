@@ -1,0 +1,25 @@
+<%= form_for(@ponto_passagem) do |f| %>
+  <% if @ponto_passagem.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ponto_passagem.errors.count, "error") %> prohibited this ponto_passagem from being saved:</h2>
+
+      <ul>
+      <% @ponto_passagem.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :rot %><br>
+    <%= f.collection_select :rot_id, Rot.all, :id, :nome, :prompt => "Select One" %>
+  </div>
+  <div class="field">
+    <%= f.label :ponto %><br>
+    <%= f.collection_select :ponto_id, Ponto.all, :id, :nome, :prompt => "Select One" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

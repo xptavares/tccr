@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rota:</strong>
+  <%= @ponto_passagem.rot.nome %>
+</p>
+
+<p>
+  <strong>Ponto:</strong>
+  <%= @ponto_passagem.ponto.nome %>
+</p>
+
+<%= link_to 'Edit', edit_ponto_passagem_path(@ponto_passagem) %> |
+<%= link_to 'Back', ponto_passagems_path %>

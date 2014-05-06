@@ -1,0 +1,29 @@
+<%= form_for(@viagem) do |f| %>
+  <% if @viagem.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@viagem.errors.count, "error") %> prohibited this viagem from being saved:</h2>
+
+      <ul>
+      <% @viagem.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
+  </div>
+  <div class="field">
+    <%= f.label :rot %><br>
+    <%= f.collection_select :rot_id, Rot.all, :id, :nome, :prompt => "Select One" %>
+  </div>
+  <div class="field">
+    <%= f.label :veiculo %><br>
+    <%= f.collection_select :veiculo_id, Veiculo.all, :id, :marca, :prompt => "Select One" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Latitudo:</strong>
+  <%= @itinerario_realizado.latitudo %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @itinerario_realizado.longitude %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @itinerario_realizado.date %>
+</p>
+
+<%= link_to 'Edit', edit_itinerario_realizado_path(@itinerario_realizado) %> |
+<%= link_to 'Back', itinerario_realizados_path %>

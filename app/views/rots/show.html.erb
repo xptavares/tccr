@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @rot.nome %>
+</p>
+
+<p>
+  <strong>Origem:</strong>
+  <%= @rot.origem.nome %>
+</p>
+
+<p>
+  <strong>Destino:</strong>
+  <%= @rot.destino.nome %>
+</p>
+
+<%= link_to 'Edit', edit_rot_path(@rot) %> |
+<%= link_to 'Back', rots_path %>

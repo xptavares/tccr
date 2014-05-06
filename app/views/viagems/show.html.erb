@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @viagem.date %>
+</p>
+
+<p>
+  <strong>Rota:</strong>
+  <%= @viagem.rot.nome %>
+</p>
+
+<p>
+  <strong>Veiculo:</strong>
+  <%= @viagem.veiculo.marca %>
+</p>
+
+<%= link_to 'Edit', edit_viagem_path(@viagem) %> |
+<%= link_to 'Back', viagems_path %>

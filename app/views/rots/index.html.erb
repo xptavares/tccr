@@ -1,0 +1,27 @@
+<h1>Listing rots</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rots.each do |rot| %>
+      <tr>
+        <td><%= rot.nome %></td>
+        <td><%= link_to 'Show', rot %></td>
+        <td><%= link_to 'Edit', edit_rot_path(rot) %></td>
+        <td><%= link_to 'Destroy', rot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rot', new_rot_path %>
