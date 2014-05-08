@@ -15,7 +15,7 @@
   <tbody>
     <% @itinerario_realizados.each do |itinerario_realizado| %>
       <tr>
-        <td><%= itinerario_realizado.latitudo %></td>
+        <td><%= itinerario_realizado.latitude %></td>
         <td><%= itinerario_realizado.longitude %></td>
         <td><%= itinerario_realizado.date %></td>
         <td><%= link_to 'Show', itinerario_realizado %></td>

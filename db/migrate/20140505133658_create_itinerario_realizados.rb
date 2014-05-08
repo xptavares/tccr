@@ -1,7 +1,7 @@
 class CreateItinerarioRealizados < ActiveRecord::Migration
   def change
     create_table :itinerario_realizados do |t|
-      t.float :latitudo
+      t.float :latitude
       t.float :longitude
       t.datetime :date
       t.belongs_to :viagem	

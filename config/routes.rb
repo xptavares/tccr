@@ -2,8 +2,7 @@ Tccr::Application.routes.draw do
   get "map/index"
   get "map/viagem", to: 'map#viagem'
   get "veiculos/:id/viagens.json", to: 'veiculos#viagens'
-
-  
+  get "viagens/:id/itinerario_realizados.json", to: 'viagems#itinerario_realizados'
 
   resources :rots
 

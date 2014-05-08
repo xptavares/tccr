@@ -4,6 +4,7 @@ class CreateViagems < ActiveRecord::Migration
       t.datetime :date
       t.belongs_to :rot	
       t.belongs_to :veiculo	
+      t.references :itinerario_realizado, index: true
 
       t.timestamps
     end

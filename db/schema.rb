@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20140506143018) do
 
   create_table "itinerario_realizados", force: true do |t|
-    t.float    "latitudo"
+    t.float    "latitude"
     t.float    "longitude"
     t.datetime "date"
     t.integer  "viagem_id"
@@ -73,10 +73,12 @@ ActiveRecord::Schema.define(version: 20140506143018) do
     t.datetime "date"
     t.integer  "rot_id"
     t.integer  "veiculo_id"
+    t.integer  "itinerario_realizado_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "viagems", ["itinerario_realizado_id"], name: "index_viagems_on_itinerario_realizado_id"
   add_index "viagems", ["rot_id"], name: "index_viagems_on_rot_id"
   add_index "viagems", ["veiculo_id"], name: "index_viagems_on_veiculo_id"
 

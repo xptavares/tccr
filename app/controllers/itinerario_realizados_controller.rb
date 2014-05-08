@@ -1,5 +1,6 @@
 class ItinerarioRealizadosController < ApplicationController
   before_action :set_itinerario_realizado, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :verify_authenticity_token
 
   # GET /itinerario_realizados
   # GET /itinerario_realizados.json
@@ -69,6 +70,6 @@ class ItinerarioRealizadosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def itinerario_realizado_params
-      params.require(:itinerario_realizado).permit(:latitudo, :longitude, :date, :viagem_id)
+      params.require(:itinerario_realizado).permit(:latitude, :longitude, :date, :viagem_id)
     end
 end

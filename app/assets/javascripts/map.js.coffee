@@ -59,6 +59,12 @@ changeVeiculo = ->
 changeViagem =->
  $.get "/viagems/" + $('#viagem').val() + ".json", (viagem) ->
   calculaPontos(viagem.origem, viagem.destino, viagem.ponto_passagems)
+
+getInit = ->
+ $.get "/viagens/"+ $('#viagem').val() + "/itinerario_realizados.json", (itinerarios) ->
+  itinerarios.forEach (itinerario) ->
+   console.log itinerario
+   marker = new google.maps.Marker({position: new google.maps.LatLng(itinerario.latitude, itinerario.longitude), map: map, title:"Hello World!"})
   
 $ ->
  $('#rot_rot_id').on 'change', (e)->
@@ -69,4 +75,5 @@ $ ->
  changeVeiculo()
  $('#viagem').on 'change',(e)->
   changeViagem()
+ setInterval getInit, 10000
 
