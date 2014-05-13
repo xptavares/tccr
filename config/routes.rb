@@ -1,4 +1,5 @@
 Tccr::Application.routes.draw do
+  get "dashboard/index", to: 'dashboard#viagem'
   get "map/index"
   get "map/viagem", to: 'map#viagem'
   get "veiculos/:id/viagens.json", to: 'veiculos#viagens'
@@ -17,6 +18,8 @@ Tccr::Application.routes.draw do
   resources :ponto_passagems
 
   resources :itinerario_realizados
+
+  root 'dashboard#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

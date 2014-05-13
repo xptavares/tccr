@@ -66,7 +66,7 @@ getInit = ->
    console.log itinerario
    marker = new google.maps.Marker({position: new google.maps.LatLng(itinerario.latitude, itinerario.longitude), map: map, title:"Hello World!"})
   
-$ ->
+ready = -> 
  $('#rot_rot_id').on 'change', (e)->
   changeRota()
  changeRota()
@@ -77,3 +77,5 @@ $ ->
   changeViagem()
  setInterval getInit, 10000
 
+$(document).ready(ready)
+$(document).on('page:load', ready)

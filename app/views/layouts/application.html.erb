@@ -3,13 +3,24 @@
 <head>
   <title>Tccr</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "/css/bootstrap.min.css", media: "all" %>
   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "/js/bootstrap.min.js" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<ul class="nav nav-tabs">
+  <li class="active"><a href="/">Inicio</a></li>
+  <li><%= link_to 'Viagems', viagems_path %></li>
+  <li><%= link_to 'Rotas', rots_path %></li>
+</ul>
+
+<div class="container">
+	<%= yield %>
+</div>
+
 
 </body>
 </html>

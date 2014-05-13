@@ -1,19 +1,17 @@
 <h1>Listing viagems</h1>
 
-<table>
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th>Date</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Viagem</th>
+      <th colspan="3">Actions</th>
     </tr>
   </thead>
 
   <tbody>
     <% @viagems.each do |viagem| %>
       <tr>
-        <td><%= viagem.date %></td>
+        <td><%= viagem.nome %></td>
         <td><%= link_to 'Show', viagem %></td>
         <td><%= link_to 'Edit', edit_viagem_path(viagem) %></td>
         <td><%= link_to 'Destroy', viagem, method: :delete, data: { confirm: 'Are you sure?' } %></td>

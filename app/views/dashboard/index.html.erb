@@ -1,0 +1,31 @@
+<h1 class="page-header">Dashboard</h1>
+
+<table>
+	<tbody>
+		<td>
+
+			<div id="control_panel">
+
+			 <div class="field">
+			   <%= label_tag :veiculo %><br>
+			   <%= collection_select :veiculo, :veiculo_id, Veiculo.all, :id, :marca %>
+			 </div>
+			  <div class="field">
+			   <%= label_tag :viagem %><br>
+			   <select id="viagem">
+			   </select>
+			 </div>
+
+			</div>
+			<div id="directions_panel"></div>
+			</div>
+
+			
+		</td>
+		<td>
+			<div id="map-canvas" style="width:800px;height:600px;"></div>
+		</td>
+	</tbody>
+</table>
+
+
