@@ -3,7 +3,6 @@
 <table>
 	<tbody>
 		<td>
-
 			<div id="control_panel">
 
 			 <div class="field">
@@ -12,8 +11,7 @@
 			 </div>
 			  <div class="field">
 			   <%= label_tag :viagem %><br>
-			   <select id="viagem">
-			   </select>
+			   <%= collection_select :viagem, :viagem_id, Viagem.all, :id, :nome %>
 			 </div>
 
 			</div>

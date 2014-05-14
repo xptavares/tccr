@@ -10,20 +10,30 @@
       </ul>
     </div>
   <% end %>
-
- <div class="field">
-    <%= f.label :nome %><br>
-    <%= f.text_field :nome %>
-  </div>
-  <div class="field">
-    <%= f.label :origem %><br>
-    <%= f.collection_select :origem_id, Ponto.all, :id, :nome, :prompt => "Select One" %>
-  </div>
-  <div class="field">
-    <%= f.label :destino %><br>
-    <%= f.collection_select :destino_id, Ponto.all, :id, :nome, :prompt => "Select One" %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<table>
+  <tbody>
+    <td>
+      <div id="control_panel">
+        <div class="field">
+          <%= f.label :nome %><br>
+          <%= f.text_field :nome %>
+        </div>
+        <div class="field">
+          <%= f.label :origem %><br>
+          <%= f.collection_select :origem_id, Ponto.all, :id, :nome, :prompt => "Select One", class: "form-control" %>
+        </div>
+        <div class="field">
+          <%= f.label :destino %><br>
+          <%= f.collection_select :destino_id, Ponto.all, :id, :nome, :prompt => "Select One", class: "form-control" %>
+        </div>
+        <div class="actions">
+          <%= f.submit class: "btn btn-primary" %>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div id="map-canvas" style="width:800px;height:600px;"></div>
+    </td>
+  </tbody>
+</table>
 <% end %>

@@ -43,25 +43,34 @@ calculaPontos = (start, end, waypoints) ->
     summaryPanel.innerHTML += leg.end_address + '<br>'
     summaryPanel.innerHTML += leg.distance.text + '<br><br>'
 
+createRota = ->
+ origem = $('#rot_origem_id option:selected').text()
+ destino = $('#rot_destino_id option:selected').text()
+ calculaPontos(origem, destino, [])
 changeRota = ->
  if( typeof $('#rot_rot_id').val() != "undefined")
   $.get  "/rots/" + $('#rot_rot_id').val() + ".json", ( data ) ->
    calculaPontos(data.origem, data.destino, data.ponto_passagems);
 
+changeRotaViagem = ->
+ if( typeof $('#viagem_rot_id').val() != "undefined")
+  $.get  "/rots/" + $('#viagem_rot_id').val() + ".json", ( data ) ->
+   calculaPontos(data.origem, data.destino, data.ponto_passagems);
+
 changeVeiculo = ->
- if( typeof $('#veiculo_veiculo_id').val() != "undefined" && typeof $('#viagem').val() != "undefined")
+ if( typeof $('#veiculo_veiculo_id').val() != "undefined" && typeof $('#viagem_viagem_id').val() != "undefined")
   $.get "/veiculos/" + $('#veiculo_veiculo_id').val() + "/viagens.json", ( data ) ->
-   $('#viagem').empty()
+   $('#viagem_viagem_id').empty()
    data.forEach (viagem) ->
-    $('#viagem').append $('<option>', {value: viagem.id, text : viagem.id })
+    $('#viagem_viagem_id').append $('<option>', {value: viagem.id, text : viagem.nome })
     changeViagem()
 
 changeViagem =->
- $.get "/viagems/" + $('#viagem').val() + ".json", (viagem) ->
+ $.get "/viagems/" + $('#viagem_viagem_id').val() + ".json", (viagem) ->
   calculaPontos(viagem.origem, viagem.destino, viagem.ponto_passagems)
 
 getInit = ->
- $.get "/viagens/"+ $('#viagem').val() + "/itinerario_realizados.json", (itinerarios) ->
+ $.get "/viagens/"+ $('#viagem_viagem_id').val() + "/itinerario_realizados.json", (itinerarios) ->
   itinerarios.forEach (itinerario) ->
    console.log itinerario
    marker = new google.maps.Marker({position: new google.maps.LatLng(itinerario.latitude, itinerario.longitude), map: map, title:"Hello World!"})
@@ -73,9 +82,17 @@ ready = ->
  $('#veiculo_veiculo_id').on 'change', (e)->
   changeVeiculo()
  changeVeiculo()
- $('#viagem').on 'change',(e)->
+ $('#viagem_viagem_id').on 'change',(e)->
   changeViagem()
- setInterval getInit, 10000
+ $('#viagem_rot_id').on 'change', (e)->
+  changeRotaViagem()
+ changeRotaViagem()
+ $('#rot_origem_id').on 'change', (e)->
+  createRota()
+ createRota()
+ $('#rot_destino_id').on 'change', (e)->
+  createRota()
+ #setInterval getInit, 10000
 
 $(document).ready(ready)
 $(document).on('page:load', ready)

@@ -4,8 +4,7 @@ class VeiculosController < ApplicationController
   # GET /veiculos/1/viagens
   # GET /veiculos/1/viagens.json
   def viagens
-    @viagem = Veiculo.find(params[:id]).viagems
-    render json: @viagem
+    @viagems = Veiculo.find(params[:id]).viagems
   end
 
   # GET /veiculos

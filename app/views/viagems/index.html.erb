@@ -1,4 +1,8 @@
-<h1>Listing viagems</h1>
+<h1>Lista de Viagens</h1>
+
+<div class="well">
+   <%= link_to 'Nova Viagem', new_viagem_path, class: "btn btn-primary" %>
+</div>
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -19,7 +23,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Viagem', new_viagem_path %>

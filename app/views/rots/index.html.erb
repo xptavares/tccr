@@ -1,5 +1,8 @@
-<h1>Listing rotas</h1>
+<h1>Lista de Rotas</h1>
 
+<div class="well">
+   <%= link_to 'Nova Rota', new_rot_path, class: "btn btn-primary" %>
+</div>
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
@@ -19,7 +22,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Rot', new_rot_path %>
