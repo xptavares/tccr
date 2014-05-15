@@ -7,15 +7,14 @@ directionsService = new google.maps.DirectionsService()
 map = null
 
 initialize = -> 
- directionsDisplay = new google.maps.DirectionsRenderer()
- chicago = new google.maps.LatLng(41.850033, -87.6500523)
- mapOptions =
-  zoom: 6
-  center: chicago
- map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions)
- directionsDisplay.setMap(map)
-google.maps.event.addDomListener(window, 'load', initialize)
-
+ if document.getElementById('map-canvas') != null
+  directionsDisplay = new google.maps.DirectionsRenderer()
+  chicago = new google.maps.LatLng(41.850033, -87.6500523)
+  mapOptions =
+   zoom: 6
+   center: chicago
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions)
+  directionsDisplay.setMap(map)
 
 calculaPontos = (start, end, waypoints) ->
  waypts = []
@@ -32,16 +31,17 @@ calculaPontos = (start, end, waypoints) ->
  directionsService.route request, (response, status) ->
   if status == google.maps.DirectionsStatus.OK
    directionsDisplay.setDirections response
-   route = response.routes[0]
-   summaryPanel = document.getElementById('directions_panel')
-   summaryPanel.innerHTML = ''
-   routeSegment = 0
-   for leg in route.legs
-   	routeSegment++
-   	summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment + '</b><br>'
-    summaryPanel.innerHTML += leg.start_address + ' to '
-    summaryPanel.innerHTML += leg.end_address + '<br>'
-    summaryPanel.innerHTML += leg.distance.text + '<br><br>'
+   if document.getElementById('directions_panel') != null
+    route = response.routes[0]
+    summaryPanel = document.getElementById('directions_panel')
+    summaryPanel.innerHTML = ''
+    routeSegment = 0
+    for leg in route.legs
+   	 routeSegment++
+   	 summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment + '</b><br>'
+     summaryPanel.innerHTML += leg.start_address + ' to '
+     summaryPanel.innerHTML += leg.end_address + '<br>'
+     summaryPanel.innerHTML += leg.distance.text + '<br><br>'
 
 createRota = ->
  origem = $('#rot_origem_id option:selected').text()
@@ -72,7 +72,6 @@ changeViagem =->
 getInit = ->
  $.get "/viagens/"+ $('#viagem_viagem_id').val() + "/itinerario_realizados.json", (itinerarios) ->
   itinerarios.forEach (itinerario) ->
-   console.log itinerario
    marker = new google.maps.Marker({position: new google.maps.LatLng(itinerario.latitude, itinerario.longitude), map: map, title:"Hello World!"})
   
 ready = -> 
@@ -93,6 +92,7 @@ ready = ->
  $('#rot_destino_id').on 'change', (e)->
   createRota()
  #setInterval getInit, 10000
+ initialize()
 
 $(document).ready(ready)
 $(document).on('page:load', ready)

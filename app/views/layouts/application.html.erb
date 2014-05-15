@@ -12,9 +12,9 @@
 <body>
 
 <ul class="nav nav-tabs">
-  <li class="active"><a href="/">Inicio</a></li>
-  <li><%= link_to 'Viagems', viagems_path %></li>
-  <li><%= link_to 'Rotas', rots_path %></li>
+  <li <% if request.original_fullpath == '/' %> class="active" <% end %>><a href="/">Inicio</a></li>
+  <li <% if request.original_fullpath.include?'/viagems' %> class="active" <% end %>><%= link_to 'Viagems', viagems_path %></li>
+  <li <% if request.original_fullpath.include?'/rots' %> class="active" <% end %>><%= link_to 'Rotas', rots_path %></li>
 </ul>
 
 <div class="container">
