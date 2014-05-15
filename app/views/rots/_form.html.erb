@@ -26,6 +26,32 @@
           <%= f.label :destino %><br>
           <%= f.collection_select :destino_id, Ponto.all, :id, :nome, :prompt => "Select One", class: "form-control" %>
         </div>
+        <div id="ponto-passagems-list"></div>
+        <div id="fields-for-ponto-passagems-list" class="numerous">
+          <%= f.fields_for :ponto_passagems, PontoPassagem.new, :child_index => 'replace_this' do |u| %>
+
+            <div class="field">
+              <%= u.label :ponto_id %><br />
+              <%= u.collection_select :ponto_id, Ponto.all, :id, :nome, :prompt => "Select One", class: "form-control" %>
+            </div>
+
+            <%= link_to 'Remover Ponto Passagem', '#', :class => 'numerous-remove' %>
+          <% end %>
+        </div>
+        <div class='fields-for-ponto-passagems-list'>
+          <%= f.fields_for :ponto_passagems do |u| %>
+          
+            <div class="field">
+              <%= u.label :ponto_id %><br />
+              <%= u.collection_select :ponto_id, Ponto.all, :id, :nome, :prompt => "Select One", class: "form-control" %>
+            </div>
+
+            <%= link_to 'Remover Ponto Passagem', '#', :class => 'numerous-remove' %>
+          <% end %>
+        </div>
+
+        <%= link_to 'Add Ponto Passagem', '#', :id => 'add-to-ponto-passagems-list' %>
+
         <div class="actions">
           <%= f.submit class: "btn btn-primary" %>
         </div>

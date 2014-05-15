@@ -93,6 +93,7 @@ ready = ->
   createRota()
  #setInterval getInit, 10000
  initialize()
+ Numerous.init()
 
 $(document).ready(ready)
 $(document).on('page:load', ready)
