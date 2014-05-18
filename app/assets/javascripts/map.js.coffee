@@ -6,7 +6,7 @@ directionsDisplay = null
 directionsService = new google.maps.DirectionsService()
 map = null
 
-initialize = -> 
+initialize = ->
  if document.getElementById('map-canvas') != null
   directionsDisplay = new google.maps.DirectionsRenderer()
   chicago = new google.maps.LatLng(41.850033, -87.6500523)
@@ -20,14 +20,14 @@ calculaPontos = (start, end, waypoints) ->
  waypts = []
  waypoints.forEach (way)->
   waypts.push {location:way.ponto_passagems_ponto_nome, stopover:true}
- 
- request = 
+
+ request =
   origin: start
   destination: end
   waypoints: waypts
   optimizeWaypoints: true
   travelMode: google.maps.TravelMode.DRIVING
- 
+
  directionsService.route request, (response, status) ->
   if status == google.maps.DirectionsStatus.OK
    directionsDisplay.setDirections response
@@ -46,7 +46,10 @@ calculaPontos = (start, end, waypoints) ->
 createRota = ->
  origem = $('#rot_origem_id option:selected').text()
  destino = $('#rot_destino_id option:selected').text()
- calculaPontos(origem, destino, [])
+ pontosPassagem = []
+ $('.fields-for-passagems-list option:selected').map (way)->
+  pontosPassagem.push {ponto_passagems_ponto_nome: $(this).text()}
+ calculaPontos(origem, destino, pontosPassagem)
 changeRota = ->
  if( typeof $('#rot_rot_id').val() != "undefined")
   $.get  "/rots/" + $('#rot_rot_id').val() + ".json", ( data ) ->
@@ -73,8 +76,17 @@ getInit = ->
  $.get "/viagens/"+ $('#viagem_viagem_id').val() + "/itinerario_realizados.json", (itinerarios) ->
   itinerarios.forEach (itinerario) ->
    marker = new google.maps.Marker({position: new google.maps.LatLng(itinerario.latitude, itinerario.longitude), map: map, title:"Hello World!"})
-  
-ready = -> 
+
+createPontos = ->
+  $('.pontos').on 'change', (e)->
+   createRota()
+
+optionsNumerous =
+ 'passagems-list':
+  'add': (form) ->
+   createPontos()
+
+ready = ->
  $('#rot_rot_id').on 'change', (e)->
   changeRota()
  changeRota()
@@ -91,9 +103,12 @@ ready = ->
  createRota()
  $('#rot_destino_id').on 'change', (e)->
   createRota()
+ $('#rot_destino_id').on 'change', (e)->
+  createRota()
  #setInterval getInit, 10000
+ createPontos()
  initialize()
- Numerous.init()
+ Numerous.init optionsNumerous
 
 $(document).ready(ready)
 $(document).on('page:load', ready)

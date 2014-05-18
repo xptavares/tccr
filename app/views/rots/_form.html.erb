@@ -20,11 +20,11 @@
         </div>
         <div class="field">
           <%= f.label :origem %><br>
-          <%= f.collection_select :origem_id, Ponto.all, :id, :nome, :prompt => "Select One", class: "form-control" %>
+          <%= f.collection_select :origem_id, Ponto.all, :id, :nome, {prompt: "Select One"}, {class: "form-control"} %>
         </div>
         <div class="field">
           <%= f.label :destino %><br>
-          <%= f.collection_select :destino_id, Ponto.all, :id, :nome, :prompt => "Select One", class: "form-control" %>
+          <%= f.collection_select :destino_id, Ponto.all, :id, :nome, {prompt: "Select One"}, {class: "form-control"} %>
         </div>
         <div id="passagems-list"></div>
         <div id="fields-for-passagems-list" class="numerous">
@@ -32,7 +32,7 @@
 
             <div class="field">
               <%= u.label :ponto_id %><br />
-              <%= u.collection_select :ponto_id, Ponto.all, :id, :nome, :prompt => "Select One", class: "form-control" %>
+              <%= u.collection_select :ponto_id, Ponto.all, :id, :nome, {prompt: "Select One"}, {class: "form-control pontos"} %>
             </div>
 
             <%= link_to 'Remover Ponto Passagem', '#', :class => 'numerous-remove' %>
@@ -43,7 +43,7 @@
 
             <div class="field">
               <%= u.label :ponto_id %><br />
-              <%= u.collection_select :ponto_id, Ponto.all, :id, :nome, :prompt => "Select One", class: "form-control" %>
+              <%= u.collection_select :ponto_id, Ponto.all, :id, :nome, {prompt: "Select One"}, {class: "form-control pontos"} %>
             </div>
 
             <%= link_to 'Remover Ponto Passagem', '#', :class => 'numerous-remove' %>
