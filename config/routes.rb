@@ -4,6 +4,8 @@ Tccr::Application.routes.draw do
   get "map/viagem", to: 'map#viagem'
   get "veiculos/:id/viagens", to: 'veiculos#viagens'
   get "viagens/:id/itinerario_realizados.json", to: 'viagems#itinerario_realizados'
+  get "api/veiculos/:id/viagens", to: 'veiculos#viagens'
+  get "api/viagens/:id/itinerario", to: 'viagems#itinerario_realizados'
 
   resources :rots
 
@@ -61,7 +63,7 @@ Tccr::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

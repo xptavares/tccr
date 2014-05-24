@@ -5,7 +5,6 @@ class ViagemsController < ApplicationController
   # GET /veiculos/1/itinerario_realizados.json
   def itinerario_realizados
     @itinerario_realizados = Viagem.find(params[:id]).itinerario_realizados
-    render json: @itinerario_realizados
   end
 
   # GET /viagems
