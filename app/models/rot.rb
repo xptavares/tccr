@@ -5,4 +5,6 @@ class Rot < ActiveRecord::Base
     belongs_to :destino, :class_name => "Ponto"
 
     accepts_nested_attributes_for :destino, :origem, :ponto_passagems
+
+    validates :nome, :origem_id, :destino_id, :presence => true
 end

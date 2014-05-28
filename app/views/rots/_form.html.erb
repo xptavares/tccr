@@ -10,56 +10,67 @@
       </ul>
     </div>
   <% end %>
-<table>
-  <tbody>
-    <td>
-      <div id="control_panel">
+<div class="row">
+
+      <div id="control_panel" class="col-md-3">
         <div class="field">
           <%= f.label :nome %><br>
-          <%= f.text_field :nome %>
+          <%= f.text_field :nome, {class: "form-control"} %>
         </div>
         <div class="field">
           <%= f.label :origem %><br>
           <%= f.collection_select :origem_id, Ponto.all, :id, :nome, {prompt: "Select One"}, {class: "form-control"} %>
         </div>
+
         <div class="field">
           <%= f.label :destino %><br>
           <%= f.collection_select :destino_id, Ponto.all, :id, :nome, {prompt: "Select One"}, {class: "form-control"} %>
+        </div>
+
+        <div class="field">
+            <label>Pontos de Passagem</label>
+            <%= link_to 'Adicionar Ponto de Passagem', '#', :id => 'add-to-passagems-list',:class => "btn btn-success btn-block btn-xs" %>
         </div>
         <div id="passagems-list"></div>
         <div id="fields-for-passagems-list" class="numerous">
           <%= f.fields_for :ponto_passagems, PontoPassagem.new, :child_index => 'replace_this' do |u| %>
 
             <div class="field">
-              <%= u.label :ponto_id %><br />
-              <%= u.collection_select :ponto_id, Ponto.all, :id, :nome, {prompt: "Select One"}, {class: "form-control pontos"} %>
+              <div class="input-group input-group-sm">
+                <%= u.collection_select :ponto_id, Ponto.all, :id, :nome, {prompt: "Select One"}, {class: "form-control pontos"} %>
+                <span class="input-group-btn">
+                  <%= link_to 'Rem', '#', :class => 'btn btn-default' %>
+                </span>
+              </div>
             </div>
 
-            <%= link_to 'Remover Ponto Passagem', '#', :class => 'numerous-remove' %>
+
           <% end %>
         </div>
         <div class='fields-for-passagems-list'>
           <%= f.fields_for :ponto_passagems do |u| %>
 
             <div class="field">
-              <%= u.label :ponto_id %><br />
-              <%= u.collection_select :ponto_id, Ponto.all, :id, :nome, {prompt: "Select One"}, {class: "form-control pontos"} %>
+              <div class="input-group input-group-sm">
+                <%= u.collection_select :ponto_id, Ponto.all, :id, :nome, {prompt: "Select One"}, {class: "form-control pontos"} %>
+                <span class="input-group-btn">
+                  <%= link_to 'Remover', '#', :class => 'btn btn-default numerous-remove' %>
+                </span>
+            </div>
             </div>
 
-            <%= link_to 'Remover Ponto Passagem', '#', :class => 'numerous-remove' %>
+
           <% end %>
         </div>
 
-        <%= link_to 'Add Ponto Passagem', '#', :id => 'add-to-passagems-list' %>
+
 
         <div class="actions">
-          <%= f.submit class: "btn btn-primary" %>
+          <%= f.submit class: "btn btn-primary btn-block" %>
         </div>
       </div>
-    </td>
-    <td>
-      <div id="map-canvas" style="width:800px;height:600px;"></div>
-    </td>
-  </tbody>
-</table>
+
+
+      <div id="map-canvas" style="height:500px;" class="col-md-9"></div>
+  </div>
 <% end %>
