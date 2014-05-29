@@ -38,8 +38,8 @@ calculaPontos = (start, end, waypoints) ->
     routeSegment = 0
     for leg in route.legs
    	 routeSegment++
-   	 summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment + '</b><br>'
-     summaryPanel.innerHTML += leg.start_address + ' to '
+   	 summaryPanel.innerHTML += '<b>Segmento: ' + routeSegment + '</b><br>'
+     summaryPanel.innerHTML += leg.start_address + ' para '
      summaryPanel.innerHTML += leg.end_address + '<br>'
      summaryPanel.innerHTML += leg.distance.text + '<br><br>'
 

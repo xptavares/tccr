@@ -1,4 +1,4 @@
-<h1>Lista de Viagens</h1>
+<h1 class="page-header">Viagens</h1>
 
 <div class="well">
    <%= link_to 'Nova Viagem', new_viagem_path, class: "btn btn-primary" %>
@@ -8,17 +8,26 @@
   <thead>
     <tr>
       <th>Viagem</th>
-      <th colspan="3">Actions</th>
+      <th>Data</th>
+      <th>Veículo</th>
+      <th>Origem</th>
+      <th>Destino</th>
+      <th style="width:140px;">Ações</th>
     </tr>
   </thead>
 
   <tbody>
     <% @viagems.each do |viagem| %>
       <tr>
-        <td><%= viagem.nome %></td>
-        <td><%= link_to 'Show', viagem %></td>
-        <td><%= link_to 'Edit', edit_viagem_path(viagem) %></td>
-        <td><%= link_to 'Destroy', viagem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= viagem.rot.nome %></td>
+        <td><%= viagem.date %></td>
+        <td><%= viagem.veiculo.marca %></td>
+        <td><%= viagem.rot.origem.nome %></td>
+        <td><%= viagem.rot.destino.nome %></td>
+        <td>
+            <%= link_to 'Editar', edit_viagem_path(viagem) %>
+            <%= link_to 'Remover', viagem, method: :delete, data: { confirm: 'Você tem certeza?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
