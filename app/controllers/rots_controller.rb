@@ -69,6 +69,6 @@ class RotsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rot_params
-      params.require(:rot).permit(:nome, :origem_id, :destino_id, ponto_passagem_attributes:[:ponto_id])
+      params.require(:rot).permit(:nome, :origem, :destino, ponto_passagem_attributes:[:ponto])
     end
 end

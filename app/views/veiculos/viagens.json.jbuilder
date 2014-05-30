@@ -5,11 +5,11 @@ json.array!(@viagems) do |viagem|
   json.rota do
      json.id_rota  viagem.rot.id
      json.nome_rota viagem.rot.nome
-     json.origem viagem.rot.origem.nome
-     json.destino viagem.rot.destino.nome
+     json.origem viagem.rot.origem
+     json.destino viagem.rot.destino
      json.ponto_passagems viagem.rot.ponto_passagems do |json, ponto_passagem|
        json.ponto_passagems_id ponto_passagem.id
-       json.ponto_passagems_nome ponto_passagem.ponto.nome
+       json.ponto_passagems_nome ponto_passagem.ponto
      end
   end
 end

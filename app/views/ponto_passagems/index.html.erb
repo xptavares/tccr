@@ -15,7 +15,7 @@
     <% @ponto_passagems.each do |ponto_passagem| %>
       <tr>
         <td><%= ponto_passagem.rot.nome %></td>
-        <td><%= ponto_passagem.ponto.nome %></td>
+        <td><%= ponto_passagem.ponto %></td>
         <td><%= link_to 'Show', ponto_passagem %></td>
         <td><%= link_to 'Edit', edit_ponto_passagem_path(ponto_passagem) %></td>
         <td><%= link_to 'Destroy', ponto_passagem, method: :delete, data: { confirm: 'Are you sure?' } %></td>

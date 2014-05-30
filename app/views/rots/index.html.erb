@@ -18,8 +18,8 @@
     <% @rots.each do |rot| %>
       <tr>
         <td><%= rot.nome %></td>
-        <td><%= rot.origem.nome %></td>
-        <td><%= rot.destino.nome %></td>
+        <td><%= rot.origem %></td>
+        <td><%= rot.destino %></td>
         <td>
             <%= link_to 'Editar', edit_rot_path(rot) %>
             <%= link_to 'Remover', rot, method: :delete, data: { confirm: 'Você tem certeza?' } %>

@@ -1,13 +1,23 @@
 class AddPontoPassagem < ActiveRecord::Migration
   def change
-  	@rots = Rot.all
-  	@pontos = Ponto.all
-  	@rots.each do |rot|
-  		@pontos.each do |ponto|
-  			if !(ponto.nome.eql? rot.origem.nome) and  !(ponto.nome.eql? rot.destino.nome) and (ponto.nome.include? "sc" or ponto.nome.include? "rs")
-  				PontoPassagem.create rot_id: rot.id, ponto_id: ponto.id
-  			end
-  		end
-  	end
+      PontoPassagem.create rot_id: 1, ponto: "chapeco, sc"
+      PontoPassagem.create rot_id: 1, ponto: "criciuma, sc"
+
+      PontoPassagem.create rot_id: 2, ponto: "chapeco, sc"
+      PontoPassagem.create rot_id: 2, ponto: "criciuma, sc"
+
+      PontoPassagem.create rot_id: 3, ponto: "lages, sc"
+      PontoPassagem.create rot_id: 3, ponto: "criciuma, sc"
+
+      PontoPassagem.create rot_id: 4, ponto: "lages, sc"
+      PontoPassagem.create rot_id: 4, ponto: "chapeco, sc"
+      PontoPassagem.create rot_id: 4, ponto: "criciuma, sc"
+
+      PontoPassagem.create rot_id: 10, ponto: "florianopolis, sc"
+
+      PontoPassagem.create rot_id: 7, ponto: "florianopolis, sc"
+      PontoPassagem.create rot_id: 7, ponto: "chapeco, sc"
+      PontoPassagem.create rot_id: 7, ponto: "criciuma, sc"
+
   end
 end

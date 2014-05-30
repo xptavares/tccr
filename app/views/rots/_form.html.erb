@@ -19,12 +19,12 @@
         </div>
         <div class="field">
           <%= f.label :origem %><br>
-          <%= f.collection_select :origem_id, Ponto.all, :id, :nome, {prompt: "Select One"}, {class: "form-control"} %>
+          <%= f.text_field :origem, {class: "form-control"} %>
         </div>
 
         <div class="field">
           <%= f.label :destino %><br>
-          <%= f.collection_select :destino_id, Ponto.all, :id, :nome, {prompt: "Select One"}, {class: "form-control"} %>
+          <%= f.text_field :destino, {class: "form-control"} %>
         </div>
 
         <div class="field">
@@ -37,7 +37,7 @@
 
             <div class="field">
               <div class="input-group input-group-sm">
-                <%= u.collection_select :ponto_id, Ponto.all, :id, :nome, {prompt: "Select One"}, {class: "form-control pontos"} %>
+                <%= u.text_field :ponto, {class: "form-control, pontos"} %>
                 <span class="input-group-btn">
                   <%= link_to 'Rem', '#', :class => 'btn btn-default' %>
                 </span>
@@ -52,7 +52,7 @@
 
             <div class="field">
               <div class="input-group input-group-sm">
-                <%= u.collection_select :ponto_id, Ponto.all, :id, :nome, {prompt: "Select One"}, {class: "form-control pontos"} %>
+                <%= u.text_field :ponto, {class: "form-control, pontos"} %>
                 <span class="input-group-btn">
                   <%= link_to 'Remover', '#', :class => 'btn btn-default numerous-remove' %>
                 </span>

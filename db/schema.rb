@@ -29,35 +29,23 @@ ActiveRecord::Schema.define(version: 20140514113834) do
 
   create_table "ponto_passagems", force: true do |t|
     t.integer  "rot_id"
-    t.integer  "ponto_id"
+    t.string   "ponto"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "ponto_passagems", ["ponto_id"], name: "index_ponto_passagems_on_ponto_id", using: :btree
   add_index "ponto_passagems", ["rot_id"], name: "index_ponto_passagems_on_rot_id", using: :btree
-
-  create_table "pontos", force: true do |t|
-    t.string   "nome"
-    t.integer  "ponto_passagem_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "pontos", ["ponto_passagem_id"], name: "index_pontos_on_ponto_passagem_id", using: :btree
 
   create_table "rots", force: true do |t|
     t.string   "nome"
     t.integer  "viagem_id"
     t.integer  "ponto_passagem_id"
-    t.integer  "origem_id"
-    t.integer  "destino_id"
+    t.string   "origem"
+    t.string   "destino"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "rots", ["destino_id"], name: "index_rots_on_destino_id", using: :btree
-  add_index "rots", ["origem_id"], name: "index_rots_on_origem_id", using: :btree
   add_index "rots", ["ponto_passagem_id"], name: "index_rots_on_ponto_passagem_id", using: :btree
   add_index "rots", ["viagem_id"], name: "index_rots_on_viagem_id", using: :btree
 

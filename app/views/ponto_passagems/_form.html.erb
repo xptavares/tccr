@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :ponto %><br>
-    <%= f.collection_select :ponto_id, Ponto.all, :id, :nome, :prompt => "Select One" %>
+    <%= f.text_field :ponto, {class: "form-control"} %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -69,6 +69,6 @@ class PontoPassagemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ponto_passagem_params
-      params.require(:ponto_passagem).permit(:rot_id, :ponto_id)
+      params.require(:ponto_passagem).permit(:rot_id, :ponto)
     end
 end

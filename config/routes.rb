@@ -9,8 +9,6 @@ Tccr::Application.routes.draw do
 
   resources :rots
 
-  resources :pontos
-
   resources :viagems
 
   resources :veiculos

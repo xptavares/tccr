@@ -44,12 +44,14 @@ calculaPontos = (start, end, waypoints) ->
      summaryPanel.innerHTML += leg.distance.text + '<br><br>'
 
 createRota = ->
- origem = $('#rot_origem_id option:selected').text()
- destino = $('#rot_destino_id option:selected').text()
- pontosPassagem = []
- $('.fields-for-passagems-list option:selected').map (way)->
-  pontosPassagem.push {ponto_passagems_ponto_nome: $(this).text()}
- calculaPontos(origem, destino, pontosPassagem)
+ if( typeof $('#rot_origem').val() != "undefined" && typeof $('#rot_origem').val() != "undefined")
+  origem = $('#rot_origem').val()
+  destino = $('#rot_destino').val()
+  pontosPassagem = []
+  $('.fields-for-passagems-list :input[type="text"]').map (way)->
+   pontosPassagem.push {ponto_passagems_ponto_nome: $(this).val()}
+  calculaPontos(origem, destino, pontosPassagem)
+
 changeRota = ->
  if( typeof $('#rot_rot_id').val() != "undefined")
   $.get  "/rots/" + $('#rot_rot_id').val() + ".json", ( data ) ->

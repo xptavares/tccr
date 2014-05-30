@@ -22,8 +22,8 @@
         <td><%= viagem.rot.nome %></td>
         <td><%= viagem.date %></td>
         <td><%= viagem.veiculo.marca %></td>
-        <td><%= viagem.rot.origem.nome %></td>
-        <td><%= viagem.rot.destino.nome %></td>
+        <td><%= viagem.rot.origem %></td>
+        <td><%= viagem.rot.destino %></td>
         <td>
             <%= link_to 'Editar', edit_viagem_path(viagem) %>
             <%= link_to 'Remover', viagem, method: :delete, data: { confirm: 'Você tem certeza?' } %>
