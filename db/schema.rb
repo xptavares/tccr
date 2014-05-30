@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140514113834) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "itinerario_realizados", force: true do |t|
     t.float    "latitude"
     t.float    "longitude"
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 20140514113834) do
     t.datetime "updated_at"
   end
 
-  add_index "itinerario_realizados", ["viagem_id"], name: "index_itinerario_realizados_on_viagem_id"
+  add_index "itinerario_realizados", ["viagem_id"], name: "index_itinerario_realizados_on_viagem_id", using: :btree
 
   create_table "ponto_passagems", force: true do |t|
     t.integer  "rot_id"
@@ -31,8 +34,8 @@ ActiveRecord::Schema.define(version: 20140514113834) do
     t.datetime "updated_at"
   end
 
-  add_index "ponto_passagems", ["ponto_id"], name: "index_ponto_passagems_on_ponto_id"
-  add_index "ponto_passagems", ["rot_id"], name: "index_ponto_passagems_on_rot_id"
+  add_index "ponto_passagems", ["ponto_id"], name: "index_ponto_passagems_on_ponto_id", using: :btree
+  add_index "ponto_passagems", ["rot_id"], name: "index_ponto_passagems_on_rot_id", using: :btree
 
   create_table "pontos", force: true do |t|
     t.string   "nome"
@@ -41,7 +44,7 @@ ActiveRecord::Schema.define(version: 20140514113834) do
     t.datetime "updated_at"
   end
 
-  add_index "pontos", ["ponto_passagem_id"], name: "index_pontos_on_ponto_passagem_id"
+  add_index "pontos", ["ponto_passagem_id"], name: "index_pontos_on_ponto_passagem_id", using: :btree
 
   create_table "rots", force: true do |t|
     t.string   "nome"
@@ -53,10 +56,10 @@ ActiveRecord::Schema.define(version: 20140514113834) do
     t.datetime "updated_at"
   end
 
-  add_index "rots", ["destino_id"], name: "index_rots_on_destino_id"
-  add_index "rots", ["origem_id"], name: "index_rots_on_origem_id"
-  add_index "rots", ["ponto_passagem_id"], name: "index_rots_on_ponto_passagem_id"
-  add_index "rots", ["viagem_id"], name: "index_rots_on_viagem_id"
+  add_index "rots", ["destino_id"], name: "index_rots_on_destino_id", using: :btree
+  add_index "rots", ["origem_id"], name: "index_rots_on_origem_id", using: :btree
+  add_index "rots", ["ponto_passagem_id"], name: "index_rots_on_ponto_passagem_id", using: :btree
+  add_index "rots", ["viagem_id"], name: "index_rots_on_viagem_id", using: :btree
 
   create_table "veiculos", force: true do |t|
     t.string   "marca"
@@ -67,7 +70,7 @@ ActiveRecord::Schema.define(version: 20140514113834) do
     t.datetime "updated_at"
   end
 
-  add_index "veiculos", ["viagem_id"], name: "index_veiculos_on_viagem_id"
+  add_index "veiculos", ["viagem_id"], name: "index_veiculos_on_viagem_id", using: :btree
 
   create_table "viagems", force: true do |t|
     t.datetime "date"
@@ -78,8 +81,8 @@ ActiveRecord::Schema.define(version: 20140514113834) do
     t.datetime "updated_at"
   end
 
-  add_index "viagems", ["itinerario_realizado_id"], name: "index_viagems_on_itinerario_realizado_id"
-  add_index "viagems", ["rot_id"], name: "index_viagems_on_rot_id"
-  add_index "viagems", ["veiculo_id"], name: "index_viagems_on_veiculo_id"
+  add_index "viagems", ["itinerario_realizado_id"], name: "index_viagems_on_itinerario_realizado_id", using: :btree
+  add_index "viagems", ["rot_id"], name: "index_viagems_on_rot_id", using: :btree
+  add_index "viagems", ["veiculo_id"], name: "index_viagems_on_veiculo_id", using: :btree
 
 end
