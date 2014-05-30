@@ -73,9 +73,10 @@ changeViagem =->
   calculaPontos(viagem.origem, viagem.destino, viagem.ponto_passagems)
 
 getInit = ->
- $.get "/viagens/"+ $('#viagem_viagem_id').val() + "/itinerario_realizados.json", (itinerarios) ->
-  itinerarios.forEach (itinerario) ->
-   marker = new google.maps.Marker({position: new google.maps.LatLng(itinerario.latitude, itinerario.longitude), map: map, title:"Hello World!"})
+ if( typeof $('#viagem_viagem_id').val() != "undefined" && typeof $('#viagem_viagem_id').val() != "undefined")
+  $.get "/viagens/"+ $('#viagem_viagem_id').val() + "/itinerario_realizados.json", (itinerarios) ->
+   itinerarios.forEach (itinerario) ->
+    marker = new google.maps.Marker({position: new google.maps.LatLng(itinerario.latitude, itinerario.longitude), map: map, title:"Hello World!"})
 
 createPontos = ->
   $('.pontos').on 'change', (e)->
@@ -105,7 +106,7 @@ ready = ->
   createRota()
  $('#rot_destino_id').on 'change', (e)->
   createRota()
- #setInterval getInit, 10000
+ setInterval getInit, 10000
  createPontos()
  initialize()
  Numerous.init optionsNumerous

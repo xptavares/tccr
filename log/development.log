@@ -27140,3 +27140,1904 @@ Started GET "/assets/viagems.js?body=1" for 127.0.0.1 at 2014-05-29 21:45:43 -03
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 21:45:43 -0300
+
+
+Started GET "/rots/1/edit" for 127.0.0.1 at 2014-05-29 21:51:42 -0300
+Processing by RotsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRot Load (1.4ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPonto Load (0.7ms)[0m  SELECT "pontos".* FROM "pontos"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos"
+  [1m[36mPontoPassagem Load (2.3ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos"
+  Rendered rots/_form.html.erb (110.4ms)
+  Rendered rots/edit.html.erb within layouts/application (134.7ms)
+Completed 200 OK in 157ms (Views: 144.4ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 21:51:51 -0300
+Processing by DashboardController#index as HTML
+  [1m[36mVeiculo Load (1.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos"[0m
+  [1m[35mViagem Load (1.3ms)[0m  SELECT "viagems".* FROM "viagems"
+  [1m[36mRot Load (1.1ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mVeiculo Load (1.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mVeiculo Load (0.8ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mVeiculo Load (0.7ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mRot Load (0.8ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mRot Load (0.9ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mRot Load (0.9ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mRot Load (0.7ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mRot Load (1.3ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mRot Load (0.7ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mRot Load (0.7ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mRot Load (0.8ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mRot Load (0.9ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered dashboard/index.html.erb within layouts/application (179.8ms)
+Completed 200 OK in 201ms (Views: 178.6ms | ActiveRecord: 21.5ms)
+
+
+Started GET "/veiculos/1/viagens.json" for 127.0.0.1 at 2014-05-29 21:51:51 -0300
+Processing by VeiculosController#viagens as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mVeiculo Load (1.1ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mViagem Load (1.2ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."veiculo_id" = $1  [["veiculo_id", 1]]
+  [1m[36mRot Load (0.6ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mVeiculo Load (0.7ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.8ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[36mPontoPassagem Load (0.7ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mRot Load (0.5ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[36mPontoPassagem Load (0.7ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mRot Load (0.6ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[36mPontoPassagem Load (0.8ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mRot Load (0.6ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[36mPontoPassagem Load (0.7ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mRot Load (0.6ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (1.2ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[36mPontoPassagem Load (0.8ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mRot Load (0.7ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[35mPontoPassagem Load (0.6ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mRot Load (0.7ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[36mPontoPassagem Load (0.6ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mRot Load (0.6ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[36mPontoPassagem Load (0.6ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[35mPontoPassagem Load (0.6ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mRot Load (0.6ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[36mPontoPassagem Load (0.6ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered veiculos/viagens.json.jbuilder (156.8ms)
+Completed 200 OK in 165ms (Views: 136.8ms | ActiveRecord: 23.7ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:51:51 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mViagem Load (1.1ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mRot Load (0.8ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.7ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[35mPontoPassagem Load (0.7ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 1]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mPonto Load (0.4ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (18.5ms)
+Completed 200 OK in 25ms (Views: 16.5ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:51:51 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mViagem Load (0.9ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mRot Load (2.9ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[35mPontoPassagem Load (0.6ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mPonto Load (0.4ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (15.2ms)
+Completed 200 OK in 22ms (Views: 12.6ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:51:51 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mViagem Load (0.8ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mRot Load (0.6ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[35mPontoPassagem Load (0.9ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 1]]
+  [1m[36mPonto Load (0.8ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mPonto Load (0.7ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (15.9ms)
+Completed 200 OK in 20ms (Views: 13.1ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:51:51 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mViagem Load (0.8ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mRot Load (0.6ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[35mPontoPassagem Load (0.5ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (14.8ms)
+Completed 200 OK in 20ms (Views: 13.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:51:51 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mViagem Load (3.5ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mRot Load (0.6ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[35mPontoPassagem Load (0.6ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (23.1ms)
+Completed 200 OK in 30ms (Views: 20.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:51:51 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mViagem Load (0.7ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mRot Load (0.6ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[35mPontoPassagem Load (0.7ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mPonto Load (0.4ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (14.1ms)
+Completed 200 OK in 19ms (Views: 12.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:51:51 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mViagem Load (0.6ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mRot Load (0.6ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[35mPontoPassagem Load (0.5ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 1]]
+  [1m[36mPonto Load (0.4ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mPonto Load (0.4ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (13.1ms)
+Completed 200 OK in 17ms (Views: 11.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:51:51 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mViagem Load (0.5ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mRot Load (0.7ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[35mPontoPassagem Load (0.7ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (13.9ms)
+Completed 200 OK in 18ms (Views: 12.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:51:51 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mViagem Load (0.6ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mRot Load (0.6ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.4ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[35mPontoPassagem Load (0.5ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 1]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (14.0ms)
+Completed 200 OK in 19ms (Views: 12.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:51:51 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mViagem Load (0.6ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mRot Load (0.6ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[35mPontoPassagem Load (0.5ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 1]]
+  [1m[36mPonto Load (0.4ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mPonto Load (0.4ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (12.7ms)
+Completed 200 OK in 17ms (Views: 11.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 21:54:15 -0300
+Processing by DashboardController#index as HTML
+  [1m[35mVeiculo Load (0.8ms)[0m  SELECT "veiculos".* FROM "veiculos"
+  [1m[36mViagem Load (0.9ms)[0m  [1mSELECT "viagems".* FROM "viagems"[0m
+  [1m[35mRot Load (0.9ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mVeiculo Load (0.7ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mVeiculo Load (0.7ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mVeiculo Load (0.5ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRot Load (0.7ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRot Load (0.7ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRot Load (0.5ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered dashboard/index.html.erb within layouts/application (80.7ms)
+Completed 200 OK in 426ms (Views: 413.7ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/ponto_passagems.css?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/pontos.css?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/map.css?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/itinerario_realizados.css?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/rots.css?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/veiculos.css?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/viagems.css?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/numerous.js?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/itinerario_realizados.js?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/ponto_passagems.js?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/pontos.js?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/rots.js?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/veiculos.js?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/viagems.js?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 21:54:16 -0300
+
+
+Started GET "/veiculos/1/viagens.json" for 127.0.0.1 at 2014-05-29 21:54:18 -0300
+Processing by VeiculosController#viagens as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mVeiculo Load (0.7ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mViagem Load (1.1ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."veiculo_id" = $1[0m  [["veiculo_id", 1]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mVeiculo Load (0.5ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[35mPontoPassagem Load (0.8ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 1]]
+  [1m[36mPonto Load (0.7ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mPonto Load (0.7ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mPonto Load (0.8ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mRot Load (0.9ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[35mPontoPassagem Load (0.8ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mRot Load (0.9ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[35mPontoPassagem Load (0.6ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[35mPontoPassagem Load (0.6ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[35mPontoPassagem Load (0.6ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mRot Load (0.5ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[36mPontoPassagem Load (0.5ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[35mPontoPassagem Load (0.6ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[35mPontoPassagem Load (0.5ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mRot Load (0.8ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.7ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[36mPontoPassagem Load (0.6ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mRot Load (0.7ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.7ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[35mPontoPassagem Load (0.6ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered veiculos/viagens.json.jbuilder (160.9ms)
+Completed 200 OK in 167ms (Views: 140.8ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:54:18 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.8ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.7ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.8ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.7ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (17.7ms)
+Completed 200 OK in 24ms (Views: 16.4ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:54:19 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.7ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.8ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.7ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.7ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.6ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (15.9ms)
+Completed 200 OK in 21ms (Views: 14.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:54:19 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.6ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.7ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.7ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (17.3ms)
+Completed 200 OK in 22ms (Views: 15.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:54:19 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.6ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.5ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.4ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (12.2ms)
+Completed 200 OK in 16ms (Views: 10.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:54:19 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.5ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.5ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.5ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.4ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (12.0ms)
+Completed 200 OK in 16ms (Views: 10.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:54:19 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.5ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.5ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.4ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.5ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.4ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (12.1ms)
+Completed 200 OK in 16ms (Views: 10.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:54:19 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.6ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.8ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.6ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (14.6ms)
+Completed 200 OK in 20ms (Views: 13.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:54:19 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.6ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.4ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.4ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (11.9ms)
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:54:19 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.5ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.4ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.7ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.4ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (12.2ms)
+Completed 200 OK in 16ms (Views: 10.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:54:19 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.6ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.5ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (13.4ms)
+Completed 200 OK in 18ms (Views: 11.8ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/viagens/1/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:54:28 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.8ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItinerarioRealizado Load (1.4ms)[0m  SELECT "itinerario_realizados".* FROM "itinerario_realizados" WHERE "itinerario_realizados"."viagem_id" = $1  [["viagem_id", 1]]
+  Rendered viagems/itinerario_realizados.json.jbuilder (33.1ms)
+Completed 200 OK in 50ms (Views: 35.2ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/viagens/1/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:54:38 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.7ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItinerarioRealizado Load (0.9ms)[0m  SELECT "itinerario_realizados".* FROM "itinerario_realizados" WHERE "itinerario_realizados"."viagem_id" = $1  [["viagem_id", 1]]
+  Rendered viagems/itinerario_realizados.json.jbuilder (5.1ms)
+Completed 200 OK in 15ms (Views: 10.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/viagens/1/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:54:48 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.7ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItinerarioRealizado Load (0.8ms)[0m  SELECT "itinerario_realizados".* FROM "itinerario_realizados" WHERE "itinerario_realizados"."viagem_id" = $1  [["viagem_id", 1]]
+  Rendered viagems/itinerario_realizados.json.jbuilder (4.3ms)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/viagems" for 127.0.0.1 at 2014-05-29 21:54:53 -0300
+Processing by ViagemsController#index as HTML
+  [1m[36mViagem Load (0.9ms)[0m  [1mSELECT "viagems".* FROM "viagems"[0m
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mVeiculo Load (0.6ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mVeiculo Load (0.5ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mVeiculo Load (0.6ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mRot Load (0.7ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRot Load (0.5ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRot Load (0.7ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mRot Load (0.8ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mRot Load (0.8ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.7ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mRot Load (0.7ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mRot Load (0.5ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered viagems/index.html.erb within layouts/application (160.1ms)
+Completed 200 OK in 178ms (Views: 160.8ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:54:58 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[35mViagem Load (0.7ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "undefined"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.4ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:55:04 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mViagem Load (0.7ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "undefined"]]
+Completed 404 Not Found in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.9ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:55:08 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[35mViagem Load (0.7ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "undefined"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.3ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:55:14 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mViagem Load (0.8ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "undefined"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:55:18 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[35mViagem Load (0.8ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "undefined"]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.3ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:55:24 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mViagem Load (0.9ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "undefined"]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.5ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:55:28 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[35mViagem Load (0.8ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "undefined"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.7ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:55:34 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mViagem Load (0.8ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "undefined"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.7ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:55:38 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[35mViagem Load (0.8ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "undefined"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.7ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:55:44 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mViagem Load (0.7ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "undefined"]]
+Completed 404 Not Found in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.4ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:55:48 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[35mViagem Load (0.9ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "undefined"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.1ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:55:54 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mViagem Load (0.7ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "undefined"]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.5ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:55:58 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[35mViagem Load (0.9ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "undefined"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.5ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:56:04 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mViagem Load (0.6ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "undefined"]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.5ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:56:08 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[35mViagem Load (0.7ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "undefined"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.1ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:56:14 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mViagem Load (0.9ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "undefined"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.0ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:56:18 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[35mViagem Load (0.8ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "undefined"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.9ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:56:24 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mViagem Load (0.6ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "undefined"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.8ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:56:28 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[35mViagem Load (0.6ms)[0m  SELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1  [["id", "undefined"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.6ms)
+
+
+Started GET "/viagens/undefined/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:56:34 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mViagem Load (0.8ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "undefined"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Viagem with id=undefined):
+  app/controllers/viagems_controller.rb:7:in `itinerario_realizados'
+
+
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/xptavares/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.2ms)
+
+
+Started GET "/viagems" for 127.0.0.1 at 2014-05-29 21:56:37 -0300
+Processing by ViagemsController#index as HTML
+  [1m[35mViagem Load (1.2ms)[0m  SELECT "viagems".* FROM "viagems"
+  [1m[36mRot Load (0.7ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mVeiculo Load (0.6ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mVeiculo Load (0.5ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mVeiculo Load (0.6ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mRot Load (0.6ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRot Load (0.7ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.7ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRot Load (0.7ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.8ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRot Load (0.6ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mRot Load (0.9ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.7ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mRot Load (0.8ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.7ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mRot Load (0.7ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mRot Load (0.7ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.8ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mRot Load (0.8ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.7ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered viagems/index.html.erb within layouts/application (168.5ms)
+Completed 200 OK in 492ms (Views: 471.2ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/itinerario_realizados.css?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/map.css?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/pontos.css?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/rots.css?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/ponto_passagems.css?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/veiculos.css?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/viagems.css?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/numerous.js?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/itinerario_realizados.js?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/ponto_passagems.js?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/pontos.js?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/rots.js?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/veiculos.js?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/viagems.js?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 21:56:38 -0300
+
+
+Started GET "/rots" for 127.0.0.1 at 2014-05-29 21:57:43 -0300
+Processing by RotsController#index as HTML
+  [1m[36mRot Load (0.9ms)[0m  [1mSELECT "rots".* FROM "rots"[0m
+  [1m[35mPonto Load (0.7ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.7ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPonto Load (0.7ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered rots/index.html.erb within layouts/application (45.1ms)
+Completed 200 OK in 64ms (Views: 55.2ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 21:57:48 -0300
+Processing by DashboardController#index as HTML
+  [1m[35mVeiculo Load (0.7ms)[0m  SELECT "veiculos".* FROM "veiculos"
+  [1m[36mViagem Load (0.9ms)[0m  [1mSELECT "viagems".* FROM "viagems"[0m
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mVeiculo Load (0.4ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mVeiculo Load (0.4ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mVeiculo Load (0.4ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRot Load (0.4ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRot Load (0.7ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRot Load (0.7ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRot Load (0.5ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRot Load (0.7ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRot Load (0.7ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered dashboard/index.html.erb within layouts/application (84.0ms)
+Completed 200 OK in 104ms (Views: 92.9ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/veiculos/1/viagens.json" for 127.0.0.1 at 2014-05-29 21:57:48 -0300
+Processing by VeiculosController#viagens as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mVeiculo Load (0.9ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mViagem Load (0.9ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."veiculo_id" = $1[0m  [["veiculo_id", 1]]
+  [1m[35mRot Load (1.2ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mVeiculo Load (0.6ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.4ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[35mPontoPassagem Load (0.7ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 1]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mPonto Load (0.7ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mRot Load (0.9ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[35mPontoPassagem Load (0.8ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mRot Load (0.7ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[35mPontoPassagem Load (0.6ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mRot Load (0.7ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[35mPontoPassagem Load (0.7ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mRot Load (0.8ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.7ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[35mPontoPassagem Load (0.7ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mRot Load (0.7ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.8ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[36mPontoPassagem Load (0.8ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mRot Load (0.8ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[35mPontoPassagem Load (0.8ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mRot Load (0.8ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[35mPontoPassagem Load (0.6ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mRot Load (0.6ms)[0m  [1mSELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.7ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[36mPontoPassagem Load (0.7ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mRot Load (0.8ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "veiculos".* FROM "veiculos" WHERE "veiculos"."id" = $1 ORDER BY "veiculos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from block (2 levels) in _app_views_veiculos_viagens_json_jbuilder___4348905762567983436_22934460 at /home/xptavares/Documentos/GitHub/tccr/app/views/veiculos/viagens.json.jbuilder:10)
+  [1m[35mPontoPassagem Load (0.7ms)[0m  SELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1  [["rot_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered veiculos/viagens.json.jbuilder (159.2ms)
+Completed 200 OK in 167ms (Views: 137.8ms | ActiveRecord: 25.7ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:57:49 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.7ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.7ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.5ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (15.4ms)
+Completed 200 OK in 22ms (Views: 14.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:57:49 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (5.8ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.7ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.7ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.6ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.7ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (16.5ms)
+Completed 200 OK in 41ms (Views: 14.9ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:57:49 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.6ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.4ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.5ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.4ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (12.3ms)
+Completed 200 OK in 17ms (Views: 11.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:57:49 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.7ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.7ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.7ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.6ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (17.4ms)
+Completed 200 OK in 23ms (Views: 16.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:57:49 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.6ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.5ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.4ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.7ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (14.2ms)
+Completed 200 OK in 18ms (Views: 12.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:57:49 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.7ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.5ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (14.6ms)
+Completed 200 OK in 22ms (Views: 13.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:57:49 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.8ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.6ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.6ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.6ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (16.2ms)
+Completed 200 OK in 22ms (Views: 15.0ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:57:51 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.7ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.7ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.5ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.5ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (15.5ms)
+Completed 200 OK in 22ms (Views: 14.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:57:51 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.5ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.5ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.5ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.5ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.4ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.4ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (12.9ms)
+Completed 200 OK in 17ms (Views: 11.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/viagems/1.json" for 127.0.0.1 at 2014-05-29 21:57:51 -0300
+Processing by ViagemsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.7ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRot Load (0.7ms)[0m  SELECT "rots".* FROM "rots" WHERE "rots"."id" = $1 ORDER BY "rots"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPonto Load (0.7ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPonto Load (0.7ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: Passing jbuilder object to block is deprecated and will be removed soon.
+Use |ponto_passagem| instead of |json, ponto_passagem| as block arguments (called from _app_views_viagems_show_json_jbuilder___3158414427388211578_33989860 at /home/xptavares/Documentos/GitHub/tccr/app/views/viagems/show.json.jbuilder:4)
+  [1m[36mPontoPassagem Load (0.7ms)[0m  [1mSELECT "ponto_passagems".* FROM "ponto_passagems" WHERE "ponto_passagems"."rot_id" = $1[0m  [["rot_id", 1]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mPonto Load (0.7ms)[0m  [1mSELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPonto Load (0.6ms)[0m  SELECT "pontos".* FROM "pontos" WHERE "pontos"."id" = $1 ORDER BY "pontos"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered viagems/show.json.jbuilder (18.4ms)
+Completed 200 OK in 24ms (Views: 16.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/viagens/1/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:57:51 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.6ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItinerarioRealizado Load (0.7ms)[0m  SELECT "itinerario_realizados".* FROM "itinerario_realizados" WHERE "itinerario_realizados"."viagem_id" = $1  [["viagem_id", 1]]
+  Rendered viagems/itinerario_realizados.json.jbuilder (4.6ms)
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/viagens/1/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:57:53 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.8ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItinerarioRealizado Load (0.7ms)[0m  SELECT "itinerario_realizados".* FROM "itinerario_realizados" WHERE "itinerario_realizados"."viagem_id" = $1  [["viagem_id", 1]]
+  Rendered viagems/itinerario_realizados.json.jbuilder (4.5ms)
+Completed 200 OK in 22ms (Views: 17.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/viagens/1/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:57:58 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.9ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItinerarioRealizado Load (1.0ms)[0m  SELECT "itinerario_realizados".* FROM "itinerario_realizados" WHERE "itinerario_realizados"."viagem_id" = $1  [["viagem_id", 1]]
+  Rendered viagems/itinerario_realizados.json.jbuilder (6.9ms)
+Completed 200 OK in 19ms (Views: 13.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/viagens/1/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:57:59 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.8ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItinerarioRealizado Load (0.7ms)[0m  SELECT "itinerario_realizados".* FROM "itinerario_realizados" WHERE "itinerario_realizados"."viagem_id" = $1  [["viagem_id", 1]]
+  Rendered viagems/itinerario_realizados.json.jbuilder (5.0ms)
+Completed 200 OK in 16ms (Views: 11.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/viagens/1/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:58:03 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.8ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItinerarioRealizado Load (0.7ms)[0m  SELECT "itinerario_realizados".* FROM "itinerario_realizados" WHERE "itinerario_realizados"."viagem_id" = $1  [["viagem_id", 1]]
+  Rendered viagems/itinerario_realizados.json.jbuilder (4.2ms)
+Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/viagens/1/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:58:08 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.8ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItinerarioRealizado Load (0.9ms)[0m  SELECT "itinerario_realizados".* FROM "itinerario_realizados" WHERE "itinerario_realizados"."viagem_id" = $1  [["viagem_id", 1]]
+  Rendered viagems/itinerario_realizados.json.jbuilder (4.4ms)
+Completed 200 OK in 13ms (Views: 8.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/viagens/1/itinerario_realizados.json" for 127.0.0.1 at 2014-05-29 21:58:09 -0300
+Processing by ViagemsController#itinerario_realizados as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mViagem Load (0.8ms)[0m  [1mSELECT "viagems".* FROM "viagems" WHERE "viagems"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItinerarioRealizado Load (0.7ms)[0m  SELECT "itinerario_realizados".* FROM "itinerario_realizados" WHERE "itinerario_realizados"."viagem_id" = $1  [["viagem_id", 1]]
+  Rendered viagems/itinerario_realizados.json.jbuilder (4.4ms)
+Completed 200 OK in 13ms (Views: 8.8ms | ActiveRecord: 1.5ms)
