@@ -77,8 +77,17 @@ changeViagem =->
 getInit = ->
  if( typeof $('#viagem_viagem_id').val() != "undefined" && typeof $('#viagem_viagem_id').val() != "undefined")
   $.get "/viagens/"+ $('#viagem_viagem_id').val() + "/itinerario_realizados.json", (itinerarios) ->
+   flightPlanCoordinates = []
    itinerarios.forEach (itinerario) ->
-    marker = new google.maps.Marker({position: new google.maps.LatLng(itinerario.latitude, itinerario.longitude), map: map, title:"Hello World!"})
+    flightPlanCoordinates.push new google.maps.LatLng(itinerario.latitude, itinerario.longitude)
+   flightPath = new google.maps.Polyline({
+    path: flightPlanCoordinates,
+    geodesic: true,
+    strokeColor: '#FF0000',
+    strokeOpacity: 1.0,
+    strokeWeight: 2
+   })
+   flightPath.setMap map
 
 createPontos = ->
   $('.pontos').on 'change', (e)->
