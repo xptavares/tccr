@@ -6,13 +6,12 @@
 
 				<div class="field">
 			   	<%= label_tag :veiculo %><br>
-			   	<%= collection_select :veiculo, :veiculo_id, Veiculo.all, :id, :marca %>
-
+			   	<%= collection_select :veiculo, :veiculo_id, Veiculo.all, :id, :marca, {prompt: "Select One"}, {class: "form-control"} %>
 			  </div>
-			 <div class="field">
-			   <%= label_tag :viagem %><br>
-			   <%= collection_select :viagem, :viagem_id, Viagem.all, :id, :nome   %>
-			 </div>
+			  <div class="field">
+			   	<%= label_tag :viagem %><br>
+			   	<%= collection_select :viagem, :viagem_id, Viagem.all, :id, :nome, {prompt: "Select One"}, {class: "form-control"}  %>
+			  </div>
 
 
 			<div id="directions_panel" ></div>

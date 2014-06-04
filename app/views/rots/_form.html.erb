@@ -35,9 +35,9 @@
         <div id="fields-for-passagems-list" class="numerous">
           <%= f.fields_for :ponto_passagems, PontoPassagem.new, :child_index => 'replace_this' do |u| %>
 
-            <div class="field">
-              <%= u.text_field :ponto, {class: "form-control, pontos"} %>
-              <%= link_to 'Rem', '#', :class => 'btn btn-default numerous-remove' %>
+            <div class="field input-group">
+              <%= u.text_field :ponto, {class: "form-control pontos"} %>
+              <%= link_to 'X', '#', :class => 'btn btn-default numerous-remove' %>
             </div>
 
           <% end %>
@@ -45,9 +45,10 @@
         <div class='fields-for-passagems-list'>
           <%= f.fields_for :ponto_passagems do |u| %>
 
-            <div class="field">
-              <%= u.text_field :ponto, {class: "form-control, pontos"} %>
-              <%= link_to 'Rem', '#', :class => 'btn btn-default numerous-remove' %>
+
+            <div class="field input-group">
+              <%= u.text_field :ponto, {class: "form-control pontos"} %>
+              <%= link_to 'X', '#', :class => 'btn btn-default numerous-remove' %>
             </div>
 
           <% end %>
