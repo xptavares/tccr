@@ -64,7 +64,7 @@ changeRotaViagem = ->
 
 changeVeiculo = ->
  if( typeof $('#veiculo_veiculo_id').val() != "undefined" && typeof $('#viagem_viagem_id').val() != "undefined")
-  $.get "/veiculos/" + $('#veiculo_veiculo_id').val() + "/viagens.json", ( data ) ->
+  $.get "/api/veiculos/" + $('#veiculo_veiculo_id').val() + "/viagens.json", ( data ) ->
    $('#viagem_viagem_id').empty()
    data.forEach (viagem) ->
     $('#viagem_viagem_id').append $('<option>', {value: viagem.id, text : viagem.nome })
@@ -76,7 +76,7 @@ changeViagem =->
 
 getInit = ->
  if( typeof $('#viagem_viagem_id').val() != "undefined" && typeof $('#viagem_viagem_id').val() != "undefined")
-  $.get "/viagens/"+ $('#viagem_viagem_id').val() + "/itinerario_realizados.json", (itinerarios) ->
+  $.get "/api/viagens/"+ $('#viagem_viagem_id').val() + "/itinerario.json", (itinerarios) ->
    flightPlanCoordinates = []
    itinerarios.forEach (itinerario) ->
     flightPlanCoordinates.push new google.maps.LatLng(itinerario.latitude, itinerario.longitude)

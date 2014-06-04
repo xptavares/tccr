@@ -35,37 +35,28 @@
         <div id="fields-for-passagems-list" class="numerous">
           <%= f.fields_for :ponto_passagems, PontoPassagem.new, :child_index => 'replace_this' do |u| %>
 
-            <div class="field input-group input-group-sm">
+            <div class="field">
               <%= u.text_field :ponto, {class: "form-control, pontos"} %>
-
-                <%= link_to 'Rem', '#', :class => 'btn btn-default numerous-remove' %>
-
+              <%= link_to 'Rem', '#', :class => 'btn btn-default numerous-remove' %>
             </div>
-
 
           <% end %>
         </div>
         <div class='fields-for-passagems-list'>
           <%= f.fields_for :ponto_passagems do |u| %>
 
-            <div class="field input-group input-group-sm">
+            <div class="field">
               <%= u.text_field :ponto, {class: "form-control, pontos"} %>
-
-                <%= link_to 'Rem', '#', :class => 'btn btn-default numerous-remove' %>
-
+              <%= link_to 'Rem', '#', :class => 'btn btn-default numerous-remove' %>
             </div>
-
 
           <% end %>
         </div>
-
-
 
         <div class="actions">
           <%= f.submit class: "btn btn-primary btn-block" %>
         </div>
       </div>
-
 
       <div id="map-canvas" style="height:500px;" class="col-md-9"></div>
   </div>

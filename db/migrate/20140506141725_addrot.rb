@@ -1,7 +1,7 @@
 class Addrot < ActiveRecord::Migration
   def change
   	Rot.create nome: "Rota 1", origem: "florianopolis, sc", destino: "lages, sc"
-  	Rot.create nome: "Rota 2", origem: "lages, sc", destino: "florianopolis, sc"
+  	Rot.create nome: "Rota 2", origem: "Avenida Mauro Ramos - Centro, Florianópolis - SC", destino: "Rua Nossa Senhora da Conceição - Lagoa da Conceicao, SC"
   	Rot.create nome: "Rota 3", origem: "chapeco, sc", destino: "florianopolis, sc"
   	Rot.create nome: "Rota 4", origem: "vacaria, rs", destino: "florianopolis, sc"
   	Rot.create nome: "Rota 5", origem: "criciuma, sc", destino: "lages, sc"
