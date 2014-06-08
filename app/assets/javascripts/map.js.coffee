@@ -112,6 +112,8 @@ optionsNumerous =
  'passagems-list':
   'add': (form) ->
    createPontos()
+  'remove': (form) ->
+   createRota()
 
 ready = ->
  $('#rot_rot_id').on 'change', (e)->
