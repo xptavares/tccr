@@ -6,6 +6,7 @@ Tccr::Application.routes.draw do
   get "viagens/:id/itinerario_realizados.json", to: 'viagems#itinerario_realizados'
   get "api/veiculos/:id/viagens", to: 'veiculos#viagens'
   get "api/viagens/:id/itinerario", to: 'viagems#itinerario_realizados'
+  get "api/viagens/:id/ultimo/itinerario", to: 'viagems#ultimo_itinerario_realizados'
 
   resources :rots
 

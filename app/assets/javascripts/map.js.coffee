@@ -74,8 +74,14 @@ changeViagem =->
  $.get "/viagems/" + $('#viagem_viagem_id').val() + ".json", (viagem) ->
   calculaPontos(viagem.origem, viagem.destino, viagem.ponto_passagems)
 
+markers = []
+flightPaths = []
 getInit = ->
- if( typeof $('#viagem_viagem_id').val() != "undefined" && typeof $('#viagem_viagem_id').val() != "undefined")
+ if( typeof $('#viagem_viagem_id').val() != "undefined" && typeof $('#viagem_viagem_id').val() != "undefined" && $('#viagem_viagem_id').val() != '')
+  flightPaths.forEach (flightPath) ->
+   flightPath.setMap null
+  markers.forEach (marker) ->
+   marker.setMap null
   $.get "/api/viagens/"+ $('#viagem_viagem_id').val() + "/itinerario.json", (itinerarios) ->
    flightPlanCoordinates = []
    itinerarios.forEach (itinerario) ->
@@ -87,7 +93,16 @@ getInit = ->
     strokeOpacity: 1.0,
     strokeWeight: 2
    })
+   flightPaths.push flightPath
    flightPath.setMap map
+  $.get "/api/viagens/"+ $('#viagem_viagem_id').val() + "/ultimo/itinerario.json", (itinerario) ->
+   myLatlng = new google.maps.LatLng(itinerario.latitude, itinerario.longitude)
+   marker = new google.maps.Marker({
+    position: myLatlng,
+    title:"Hello World!"
+   })
+   markers.push marker
+   marker.setMap map
 
 createPontos = ->
   $('.pontos').on 'change', (e)->

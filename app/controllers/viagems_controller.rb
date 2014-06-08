@@ -7,6 +7,12 @@ class ViagemsController < ApplicationController
     @itinerario_realizados = Viagem.find(params[:id]).itinerario_realizados
   end
 
+  # GET /api/viagens/1/ultimo/itinerario
+  # GET /api/viagens/1/ultimo/itinerario.json
+  def ultimo_itinerario_realizados
+    @itinerario_realizado = Viagem.find(params[:id]).itinerario_realizados.last
+  end
+
   # GET /viagems
   # GET /viagems.json
   def index
