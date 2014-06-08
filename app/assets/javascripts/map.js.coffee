@@ -122,15 +122,13 @@ ready = ->
  changeVeiculo()
  $('#viagem_viagem_id').on 'change',(e)->
   changeViagem()
- $('#viagem_rot_id').on 'change', (e)->
+ $('#viagem_rot').on 'change', (e)->
   changeRotaViagem()
  changeRotaViagem()
- $('#rot_origem_id').on 'change', (e)->
+ $('#rot_origem').on 'change', (e)->
   createRota()
  createRota()
- $('#rot_destino_id').on 'change', (e)->
-  createRota()
- $('#rot_destino_id').on 'change', (e)->
+ $('#rot_destino').on 'change', (e)->
   createRota()
  setInterval getInit, 10000
  createPontos()
