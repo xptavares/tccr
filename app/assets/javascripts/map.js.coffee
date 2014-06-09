@@ -58,7 +58,7 @@ changeRota = ->
    calculaPontos(data.origem, data.destino, data.ponto_passagems);
 
 changeRotaViagem = ->
- if( typeof $('#viagem_rot_id').val() != "undefined")
+ if( typeof $('#viagem_rot_id').val() != "undefined" && $('#viagem_rot_id').val() != null && $('#viagem_rot_id').val() != '')
   $.get  "/rots/" + $('#viagem_rot_id').val() + ".json", ( data ) ->
    calculaPontos(data.origem, data.destino, data.ponto_passagems);
 
@@ -124,7 +124,7 @@ ready = ->
  changeVeiculo()
  $('#viagem_viagem_id').on 'change',(e)->
   changeViagem()
- $('#viagem_rot').on 'change', (e)->
+ $('#viagem_rot_id').on 'change', (e)->
   changeRotaViagem()
  changeRotaViagem()
  $('#rot_origem').on 'change', (e)->
